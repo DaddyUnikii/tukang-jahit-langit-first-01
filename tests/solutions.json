@@ -1,0 +1,148 @@
+[
+  {
+    "id": "night-1",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "move", "to": "3" }
+    ]
+  },
+  {
+    "id": "night-2",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 1 },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 2 },
+      { "type": "move", "to": "3" },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 2 },
+      { "type": "move", "to": "4" }
+    ]
+  },
+  {
+    "id": "night-3",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 1 },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 2 },
+      { "type": "stitch", "a": "4", "b": "5", "strands": 2 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "move", "to": "3" },
+      { "type": "move", "to": "4" },
+      { "type": "move", "to": "5" }
+    ]
+  },
+  {
+    "id": "night-4",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "1", "b": "2" },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 2 },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "2", "b": "3" },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 2 },
+      { "type": "move", "to": "4" },
+      { "type": "cut", "a": "3", "b": "4" },
+      { "type": "stitch", "a": "4", "b": "5", "strands": 2 },
+      { "type": "move", "to": "5" }
+    ]
+  },
+  {
+    "id": "night-5",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "1", "b": "2" },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 1 },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 1 },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "2", "b": "3" },
+      { "type": "move", "to": "4" },
+      { "type": "cut", "a": "3", "b": "4" },
+      { "type": "stitch", "a": "2", "b": "4", "strands": 2 },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "2", "b": "4" },
+      { "type": "stitch", "a": "2", "b": "5", "strands": 2 },
+      { "type": "move", "to": "5" },
+      { "type": "move", "to": "2" }
+    ]
+  },
+  {
+    "id": "night-6",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "1", "b": "2" },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 2 },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "2", "b": "3" },
+      { "type": "stitch", "a": "3", "b": "5", "strands": 2 },
+      { "type": "move", "to": "5" },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "3", "b": "5" },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 2 },
+      { "type": "move", "to": "4" },
+      { "type": "cut", "a": "3", "b": "4" },
+      { "type": "stitch", "a": "4", "b": "6", "strands": 2 },
+      { "type": "move", "to": "6" },
+      { "type": "cut", "a": "4", "b": "6" },
+      { "type": "stitch", "a": "6", "b": "7", "strands": 2 },
+      { "type": "move", "to": "7" }
+    ]
+  },
+  {
+    "id": "night-7",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "4", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "4" },
+      { "type": "cut", "a": "1", "b": "4" },
+      { "type": "stitch", "a": "4", "b": "3", "strands": 1 },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "3", "b": "4" },
+      { "type": "stitch", "a": "3", "b": "2", "strands": 2 },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "2", "b": "3" },
+      { "type": "stitch", "a": "2", "b": "5", "strands": 2 },
+      { "type": "move", "to": "5" },
+      { "type": "cut", "a": "2", "b": "5" },
+      { "type": "stitch", "a": "5", "b": "6", "strands": 2 },
+      { "type": "move", "to": "6" }
+    ]
+  },
+  {
+    "id": "night-8",
+    "actions": [
+      { "type": "stitch", "a": "1", "b": "2", "strands": 1 },
+      { "type": "stitch", "a": "2", "b": "3", "strands": 1 },
+      { "type": "launch" },
+      { "type": "move", "to": "2" },
+      { "type": "cut", "a": "1", "b": "2" },
+      { "type": "move", "to": "3" },
+      { "type": "cut", "a": "2", "b": "3" },
+      { "type": "stitch", "a": "3", "b": "4", "strands": 2 },
+      { "type": "move", "to": "4" },
+      { "type": "cut", "a": "3", "b": "4" },
+      { "type": "stitch", "a": "4", "b": "5", "strands": 2 },
+      { "type": "move", "to": "5" },
+      { "type": "cut", "a": "4", "b": "5" },
+      { "type": "stitch", "a": "5", "b": "6", "strands": 2 },
+      { "type": "move", "to": "6" },
+      { "type": "cut", "a": "5", "b": "6" },
+      { "type": "stitch", "a": "6", "b": "7", "strands": 2 },
+      { "type": "move", "to": "7" },
+      { "type": "cut", "a": "6", "b": "7" },
+      { "type": "stitch", "a": "7", "b": "8", "strands": 2 },
+      { "type": "move", "to": "8" }
+    ]
+  }
+]

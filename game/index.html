@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112d38">
+  <meta name="description" content="Stitch a torn night sky. Rescue fireflies, reuse golden thread, and guide the light home.">
+  <title>Tukang Jahit Langit — The Sky Tailor</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="Tukang Jahit Langit puzzle game">
+    <canvas id="scene" width="1280" height="720" aria-label="Floating paper islands with numbered sewing pins"></canvas>
+    <div id="interface">
+      <header id="global-bar">
+        <button id="home-btn" class="brand" title="Return to title">✦ <span>TUKANG JAHIT LANGIT</span></button>
+        <div class="global-controls">
+          <button id="book-btn" class="quiet" aria-label="Choose an evening">Nightbook</button>
+          <button id="help-btn" class="quiet" aria-label="How to play">?</button>
+          <button id="sound-btn" class="quiet" aria-label="Mute sound" aria-pressed="false">Sound on</button>
+          <button id="language-btn" class="quiet" aria-label="Change language">ID</button>
+        </div>
+      </header>
+      <section id="title-panel" class="panel title-panel">
+        <div class="eyebrow" data-i18n="eyebrow">A HAND-STITCHED NIGHT / AN ORIGINAL PUZZLE</div>
+        <h1>Tukang<br>Jahit <em>Langit</em><span class="title-star">✧</span></h1>
+        <p class="subtitle" data-i18n="tagline">Some nights fall apart.<br>A little thread brings the light home.</p>
+        <div class="title-actions"><button id="start-btn" class="primary" data-i18n="start">Stitch the first night <span>↗</span></button><button id="continue-btn" class="secondary" hidden data-i18n="continue">Continue journey</button></div>
+        <div class="title-rules"><span><b>01</b><span data-i18n="rule1">Sew bridges between paper islands</span></span><span><b>02</b><span data-i18n="rule2">Rescue every firefly, then go home</span></span><span><b>03</b><span data-i18n="rule3">Cut behind you. Reuse your thread.</span></span></div>
+        <p class="tiny" data-i18n="offline">8 handcrafted evenings · mouse & keyboard · entirely offline</p>
+      </section>
+      <section id="hud" hidden>
+        <div class="level-heading"><div class="eyebrow" id="level-number">EVENING 01 / 08</div><h2 id="level-title">The first stitch</h2><p id="level-subtitle"></p></div>
+        <div class="hud-stats"><div><span data-i18n="thread">THREAD</span><strong id="thread-count">0</strong><small id="thread-unit">cm left</small><div class="meter"><i id="thread-meter"></i></div></div><div><span data-i18n="flock">FIREFLIES</span><strong id="flock-count">1 / 1</strong><small data-i18n="allHome">bring every light home</small></div><div><span data-i18n="flowers">FLOWERS</span><strong id="flowers-count">0 / 0</strong><small id="moves-count">0 moves</small></div></div>
+      </section>
+      <div id="hint-note" class="hint-note" hidden><span class="note-star">✧</span><p id="hint-text"></p></div>
+      <div id="feedback" role="status" aria-live="polite" hidden></div>
+      <section id="tool-bar" hidden aria-label="Sewing and journey controls">
+        <div class="tool-modes" role="group" aria-label="Tool"><button id="stitch-btn" class="tool active" aria-pressed="true"><span>⌁</span><b data-i18n="sew">Sew</b><kbd>S</kbd></button><button id="guide-btn" class="tool" aria-pressed="false"><span>✦</span><b data-i18n="guide">Guide</b><kbd>G</kbd></button><button id="cut-btn" class="tool" aria-pressed="false"><span>✂</span><b data-i18n="cut">Cut</b><kbd>C</kbd></button></div>
+        <div class="strand-controls" id="strand-controls"><button id="single-btn" class="strand active" aria-pressed="true"><span>—</span><span data-i18n="single">Single</span><small>1 ✦</small></button><button id="double-btn" class="strand" aria-pressed="false"><span>═</span><span data-i18n="double">Double</span><small>3 ✦</small></button></div>
+        <button id="launch-btn" class="primary compact" data-i18n="launch">Let the light walk <span>▶</span></button>
+        <div class="utility-controls"><button id="undo-btn" class="quiet" title="Undo (U or Z)">↶ <span data-i18n="undo">Undo</span></button><button id="restart-btn" class="quiet" title="Restart evening (R)">↻ <span data-i18n="restart">Restart</span></button></div>
+      </section>
+      <footer id="play-footer" hidden><span id="control-hint" data-i18n="sewHint">Click two pins or drag between them · 1–8 choose pins</span><span class="phase-label" id="phase-label">PLANNING THE NIGHT</span></footer>
+      <section id="result-panel" class="panel result-panel" hidden aria-label="Evening results">
+        <div id="result-eyebrow" class="eyebrow">THE NIGHT IS MENDED</div><div id="result-icon" class="result-icon">✦</div><h2 id="result-title">Every light is home.</h2><p id="result-copy"></p><div id="star-rating" class="star-rating" aria-label="Stars earned"></div><div id="result-stats" class="result-stats"></div><div class="result-actions"><button id="next-btn" class="primary" data-i18n="next">The next evening <span>↗</span></button><button id="retry-btn" class="secondary" data-i18n="replay">Replay this evening</button><button id="undo-loss-btn" class="secondary" data-i18n="undoCrossing">Undo the crossing</button></div>
+      </section>
+      <section id="book-panel" class="panel book-panel" hidden>
+        <div class="eyebrow" data-i18n="nightbook">THE NIGHTBOOK</div><h2 data-i18n="choose">Eight ways to mend the sky.</h2><p data-i18n="bookCopy">One light at a time. Your best stars stay with you.</p><div id="level-list" class="level-list"></div><button id="book-back-btn" class="secondary" data-i18n="back">Back to the sky</button>
+      </section>
+      <section id="help-panel" class="panel help-panel" hidden>
+        <div class="eyebrow" data-i18n="how">THE TAILOR'S NOTES</div><h2 data-i18n="helpTitle">A needle. A little light.</h2><ol><li data-i18n="help1">Sew: click two numbered pins, or drag. Thread costs distance. Storms block bridges.</li><li data-i18n="help2">Single thread holds one firefly. Double thread holds three. Rescues make your flock heavier.</li><li data-i18n="help3">Start walking, then Guide: click an adjacent island. Rescue every firefly before reaching the house.</li><li data-i18n="help4">At an island you can Sew again, or Cut a bridge to refund all of its thread. Cut behind you to reach further.</li><li data-i18n="help5">Flowers are optional. Earn one star for finishing, one for all flowers, one for meeting the move target.</li></ol><div class="key-notes"><kbd>S</kbd> sew <kbd>G</kbd> guide <kbd>C</kbd> cut <kbd>1–8</kbd> pins <kbd>Space</kbd> walk <kbd>U/Z</kbd> undo <kbd>R</kbd> restart <kbd>Esc</kbd> back</div><button id="help-close-btn" class="primary" data-i18n="understood">Let's mend the sky</button>
+      </section>
+    </div>
+  </main>
+  <script src="levels.js"></script>
+  <script src="sky-core.js"></script>
+  <script src="sky-progress.js"></script>
+  <script src="sky-audio.js"></script>
+  <script src="sky-render.js"></script>
+  <script src="sky-game.js"></script>
+</body>
+</html>
