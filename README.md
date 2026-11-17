@@ -1,5 +1,9 @@
 # Tukang Jahit Langit
 
+[![Make the best game](https://make.fun/badge/best-game-01.svg)](https://make.fun/bounty/best-game-01)
+[![Rank](https://make.fun/badge/best-game-01/DaddyUnikii/tukang-jahit-langit/rank.svg)](https://make.fun/bounty/best-game-01)
+[![Reward](https://make.fun/badge/best-game-01/DaddyUnikii/tukang-jahit-langit/reward.svg)](https://make.fun/bounty/best-game-01)
+
 An original offline puzzle about mending a torn-paper night sky with golden thread. Sew bridges between numbered islands, rescue a growing flock of fireflies and bring every light to the little house. Cut bridges behind you to reuse limited thread. One strand holds one firefly; two hold three.
 
 ## Play
